@@ -1,0 +1,16 @@
+
+// Assignment #1 - Programming "Hello World"
+
+
+public class HelloWorld 
+{
+    
+    public static void main(String[] args)
+    {
+        System.out.println("Welcome to Java Programming!");
+    }
+    
+}
+
+// https://github.com/StevenTenold/Java-112---Spring-2016/blob/master/HelloWorld.java
+// Original Link - Submitted February 29th, 2016
