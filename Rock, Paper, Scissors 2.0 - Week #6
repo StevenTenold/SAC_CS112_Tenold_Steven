@@ -1,0 +1,51 @@
+package RPS;
+
+import java.lang.Math;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class RPS_Version1 
+{
+	public static void main(String[] args)
+	{
+
+		// CPU & User variables for their respective choices
+		String computer = "";
+		String user = "";
+		int counter = 0;
+
+		while(counter < 10)
+		{
+			// STEP #1 - Determining the CPU's Choice - Rock, Paper, Or Scissors      
+			int cpu = 1 + (int)((Math.random() * 10) / 3);
+
+			switch (cpu)
+			{
+			case 1: computer = "R"; break;
+			case 2: computer = "P"; break;
+			case 3: computer = "S"; break;
+			}
+
+			// Step #2 - Determining the User's Choice - Rock, Paper, Or Scissors
+			user = JOptionPane.showInputDialog("Enter \"R\", \"P\", or \"S\": ");
+			user.toUpperCase();
+
+
+			// Step #3 - // Playing the Game - User vs Opponent
+			String iResult = cpu + user;
+
+			switch(iResult)
+			{
+			case "RR":;
+			case "PP":;
+			case "SS": JOptionPane.showMessageDialog( null, "Tie Game"); break;
+
+			case "RS":;
+			case "PR":;
+			case "SP": JOptionPane.showMessageDialog( null,  "Computer Wins"); break;
+
+			default: JOptionPane.showMessageDialog( null, "User Wins"); break;
+			}
+		}
+	}
+}
