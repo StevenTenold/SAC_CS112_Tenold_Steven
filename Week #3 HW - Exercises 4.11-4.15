@@ -1,0 +1,82 @@
+Week #3 Homework Assignment
+
+4.11
+When a java program attempts to divide 2 integers, similar to Visual Basic & C++, the calculation by default is simple division where the remainder is not divided & the answer is not provided as a decimal. For example, 3/2 = 1 (3%2 = 1, as modulus (%) provides the remainder of the division).
+	In order to program the java application to provide output as a decimal instead, one method would be to utilize the System.out.printf w/ “%d”, variable name to format the output to display as a decimal.
+
+4.12
+	Control Statements can be combined via Selection Statements, utilizing If-Else or Nested If statements.
+	For example,
+A.	If you drive a compact car, you are conservative
+B.	If you drive a HYBRID, you are an environmentalist.
+C.	If you drive a truck, you are not conservative
+
+If <Statement A>
+	If <Statement B>
+Else <Statement C>
+
+
+4.13
+When coding for repetition, several types of loops are at a programmer’s disposal that are utilized in different manors.
+	In the example of “calculating the sum of the first 100 positive integers”, a for or while statement could be utilized to perform this task. For example: (PositiveIntegers – pInt)
+	For (int pInt= 1; pInt > 100; pInt ++) 
+	While (pInt >100)
+	{
+	<statements>
+	pInt++;
+	}
+	In the example of “calculating the sum of an arbitrary number of positive integers”, a do-while statement could accomplish the task effectively as shown: (Arbitrary number = userInput)
+	
+
+Int counter = 0;
+Do
+	{
+	<statements> 
+	Counter++;
+	} While (Counter > userInput)
+
+4.14
+The difference between pre-incrementation & post-incrementation is how each affects a calculation’s output when a variable is incremented within the calculation. For example:
+
+Int chapterFour = 5;
+
+chapterFour++ * 2 = 10. The variable was post-incremented, thus the change in value is not reflected in the current calculation.
+
+++chapterFour * 2 = 12. The variable was pre-incremented, thus the change in value occurs immediately & is reflected in the calculation.
+
+Note – When pre-incrementation & post-incrementation occur on a line by itself, they perform the same function.
+
+4.15
+a.
+if (age >= 65);  a semi-colon should not follow a conditional statement
+	System.out.println(“Age is greater than or equal to 65”);
+Else 
+	System.out.println(“Age is less than 65”)
+
+b.
+int x = 1, total; the value of “0” must first be assigned to total, otherwise the computer does not know what to add X to
+while (x <= 100)
+{
+	Total += x;
+	++x
+}
+
+c.
+while (x <= 100)
+ Missing Brackets
+	total+=x;
+	++x;
+ Missing Brackets
+
+d. 
+while ( y > 0)
+{
+	System.out.println(y);
+	++y;
+ Missing Brackets
+The variable ‘y’ must be declared & assigned a value.
+
+
+
+
+
