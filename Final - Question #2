@@ -43,14 +43,18 @@ import java.text.DecimalFormat;
 public class FlyingThing {
 
 	
-	double airSpeed;
-	double altimeter;
-	int time;
-	double distanceTraveled;
-	double elevationGained;
+	private double airSpeed;
+	private double altimeter;
+	private int time;
+	private double distanceTraveled;
+	private double elevationGained;
 	public String flightStats;
 	
 	DecimalFormat df = new DecimalFormat("#.###");
+	
+	public FlyingThing(int m){
+		airSpeed = m;
+	}
 	
 	public FlyingThing(int m, int f){
 		airSpeed = m;
@@ -85,4 +89,3 @@ public class FlyingThing {
 	}
 	
 }
-
