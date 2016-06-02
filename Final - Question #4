@@ -1,0 +1,54 @@
+Polymorphism - 
+//Examples from my sourcecode
+public FlyingThing(){
+		
+	}
+	
+	public FlyingThing(int m){
+		airSpeed = m;
+	}
+	
+	public FlyingThing(int m, int f){
+		airSpeed = m;
+		altimeter = f;
+	}
+	
+		FlyingThing bird = new FlyingThing();
+	bird.setAirSpeed(10);
+	bird.setAltimeter(3);
+		
+	FlyingThing airPlane = new FlyingThing(450);
+	airPlane.setAltimeter(50);
+		
+	FlyingThing jetPlane = new FlyingThing(1000, 120);
+	FlyingThing missile = new FlyingThing(2500, 800);
+	FlyingThing superMan = new FlyingThing(3500, 500);
+	// End of Examples
+	
+	As shown in the examples above, Polymorphism was implemented with multiples instances of the FlyingThing constructor
+	  with different parameters, allowing an object instance to be created in a multitude of ways.
+	  
+//SourceCode examples
+	public void fly(){
+		// 1 Minute of Flight = Miles per Hour / 60 Minutes
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0)* 1));
+		// 1 Minute of Flight = Feed per Minute * 1 Minute
+		elevationGained = altimeter * 1;
+	}
+	
+	public void fly(int t){
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0) * t));
+		elevationGained = altimeter * t;
+	}
+	
+	With the Fly() method, polymorphism was also used. Fly() without parameters calculated based on 1 minute of flight time,
+	  but Fly(int t) allowed the flight time to be dictated, thus altering the calculation.
+	  
+	  
+Inheritance-
+Source Code Example:
+public class FlyingThing extends Object{
+
+Extends allows a new object to be created, inheriting the methods & attributes of the extended OBJECT, & allowing
+  tinkering with the methods within the newly created object.
+  
