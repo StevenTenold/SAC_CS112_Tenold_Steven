@@ -1,0 +1,57 @@
+package Final.Q1;
+import javax.swing.JOptionPane;
+public class Main {
+
+	public void main (String[] args){
+		
+		int mph = Integer.parseInt(JOptionPane.showInputDialog("Enter the Speed in Miles per Hour: "));
+		int fpm = Integer.parseInt(JOptionPane.showInputDialog("Enter the climb/elevation gain in feet per minute: "));
+		
+		FlyingThing question1 = new FlyingThing();
+		question1.setAirSpeed(mph);
+		question1.setAltimeter(fpm);
+		
+	}
+}
+
+package Final.Q1;
+import java.text.DecimalFormat;
+public class FlyingThing {
+
+	
+	double airSpeed;
+	double altimeter;
+	int time;
+	double distanceTraveled;
+	double elevationGained;
+	
+	DecimalFormat df = new DecimalFormat("#.###");
+	
+	public FlyingThing(){
+
+	}
+	
+	public void fly(){
+		// 1 Minute of Flight = Miles per Hour / 60 Minutes
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0)* 1));
+		// 1 Minute of Flight = Feed per Minute * 1 Minute
+		elevationGained = altimeter * 1;
+	}
+	
+	public void fly(int t){
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0) * t));
+		elevationGained = altimeter * t;
+	}
+	
+	
+	
+	public void setAirSpeed(int airSpeedMPH){
+		airSpeed = airSpeedMPH;
+	}
+	
+	public void setAltimeter(int elevationPerMinute){
+		altimeter = elevationPerMinute;
+	}
+	
+}
+
