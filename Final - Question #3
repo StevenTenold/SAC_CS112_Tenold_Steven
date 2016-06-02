@@ -1,0 +1,20 @@
+Object-Oriented features used within this program:
+
+Methods - Methods created to perform tasks
+Classes - Classes to house the set of methods within our object
+Encapsulation - An instance of the FlyingThings object contains the attributes (unique to the object instance) & methods
+Information Hiding - "private" variables within the FlyingThings class creates variables with values that can only be accessed by methods within the class.
+Constructors - Constructors allow for an instance of the object to be created "new". Each "new" object contains it's own
+  unique attributes. Every new object that is created within Java requires a constructor call, & constructor calls
+  can differ based on the parameters set, and how those parameters assign values to the attributes/private variables.
+Polymorphism - Different Constructor Calls allow for the constructor to take different forms
+  FOR EXAMPLE: 
+  
+  public FlyingThing(int m){
+		airSpeed = m;
+	}
+	
+	public FlyingThing(int m, int f){
+		airSpeed = m;
+		altimeter = f;
+	}
