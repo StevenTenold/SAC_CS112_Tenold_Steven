@@ -1,0 +1,194 @@
+package Week11HW;
+import java.lang.Math;
+import java.text.DecimalFormat;
+
+public class diceNew 
+{
+	private int dice1 = 0;
+	private int diceTotal;
+	int diceRolled;
+	private String rollsTracker = "Your Roll: ";
+	
+	int one = 0;
+	int two = 0;
+	int three = 0;
+	int four = 0;
+	int five = 0;
+	int six = 0;
+	double[]diceChance = new double[6];
+	
+	DecimalFormat df = new DecimalFormat("#.##");
+	
+
+
+
+	public int Throw()
+	{
+		dice1 = 1 + (int)(Math.random() * 6);
+		return dice1;
+	}
+
+	public int Throw(int dR)
+	{
+		diceTotal = 0;
+		for (int count = 0; count < dR; count++)
+		{
+			dice1 = 1 + (int)(Math.random() * 6);
+
+			switch(dice1){
+			case 1: one++; break;
+			case 2: two++; break;
+			case 3: three++; break;
+			case 4: four++; break;
+			case 5: five++; break;
+			case 6: six++; break;
+			}		
+			diceTotal += dice1;
+		}
+		if (one == 0)
+			diceChance[0] = 0;
+		else
+			diceChance[0] = Double.valueOf(df.format(one / dR));
+		
+		if (two == 0)
+			diceChance[1] = Double.valueOf(df.format(two / dR));		
+		else
+			diceChance[1] = Double.valueOf(df.format(two / dR));
+		
+		if (three == 0)
+			diceChance[2] = Double.valueOf(df.format(three / dR));		
+		else
+			diceChance[2] = Double.valueOf(df.format(three / dR));
+		
+		if (four == 0)
+			diceChance[3] = Double.valueOf(df.format(four / dR));		
+		else
+			diceChance[3] = Double.valueOf(df.format(four / dR));
+		
+		if (five == 0)
+			diceChance[4] = Double.valueOf(df.format(five / dR));		
+		else
+			diceChance[4] = Double.valueOf(df.format(five / dR));
+		
+		if (six == 0)
+			diceChance[5] = Double.valueOf(df.format(six / dR));		
+		else
+			diceChance[5] = Double.valueOf(df.format(six / dR));
+		
+		return diceTotal;	
+	}
+
+	public double rollChances(int q)
+	{
+		return diceChance[q];
+	}
+	
+	public void setDiceRolled(int dR) 
+	{
+		diceRolled = dR;
+	}
+	
+	public String rollsTracker()
+	{
+		return this.rollsTracker;
+	}
+
+}
+
+package Week11HW;
+import java.lang.Math;
+import java.text.DecimalFormat;
+
+public class diceNew 
+{
+	private int dice1 = 0;
+	private int diceTotal;
+	int diceRolled;
+	private String rollsTracker = "Your Roll: ";
+	
+	int one = 0;
+	int two = 0;
+	int three = 0;
+	int four = 0;
+	int five = 0;
+	int six = 0;
+	double[]diceChance = new double[6];
+	
+	DecimalFormat df = new DecimalFormat("#.##");
+	
+
+
+
+	public int Throw()
+	{
+		dice1 = 1 + (int)(Math.random() * 6);
+		return dice1;
+	}
+
+	public int Throw(int dR)
+	{
+		diceTotal = 0;
+		for (int count = 0; count < dR; count++)
+		{
+			dice1 = 1 + (int)(Math.random() * 6);
+
+			switch(dice1){
+			case 1: one++; break;
+			case 2: two++; break;
+			case 3: three++; break;
+			case 4: four++; break;
+			case 5: five++; break;
+			case 6: six++; break;
+			}		
+			diceTotal += dice1;
+		}
+		if (one == 0)
+			diceChance[0] = 0;
+		else
+			diceChance[0] = Double.valueOf(df.format(one / dR));
+		
+		if (two == 0)
+			diceChance[1] = Double.valueOf(df.format(two / dR));		
+		else
+			diceChance[1] = Double.valueOf(df.format(two / dR));
+		
+		if (three == 0)
+			diceChance[2] = Double.valueOf(df.format(three / dR));		
+		else
+			diceChance[2] = Double.valueOf(df.format(three / dR));
+		
+		if (four == 0)
+			diceChance[3] = Double.valueOf(df.format(four / dR));		
+		else
+			diceChance[3] = Double.valueOf(df.format(four / dR));
+		
+		if (five == 0)
+			diceChance[4] = Double.valueOf(df.format(five / dR));		
+		else
+			diceChance[4] = Double.valueOf(df.format(five / dR));
+		
+		if (six == 0)
+			diceChance[5] = Double.valueOf(df.format(six / dR));		
+		else
+			diceChance[5] = Double.valueOf(df.format(six / dR));
+		
+		return diceTotal;	
+	}
+
+	public double rollChances(int q)
+	{
+		return diceChance[q];
+	}
+	
+	public void setDiceRolled(int dR) 
+	{
+		diceRolled = dR;
+	}
+	
+	public String rollsTracker()
+	{
+		return this.rollsTracker;
+	}
+
+}
+
