@@ -1,0 +1,88 @@
+package Final.Q2;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+public class Main {
+
+	public static void main (String[] args){
+		
+		FlyingThing bird = new FlyingThing(10, 3);
+		FlyingThing airPlane = new FlyingThing(450, 50);
+		FlyingThing jetPlane = new FlyingThing(1000, 120);
+		FlyingThing missile = new FlyingThing(2500, 800);
+		FlyingThing superMan = new FlyingThing(3500, 500);
+		
+		int interval = 5;
+		
+		while (interval <= 30){
+			String flightStats = "FlyingThing\tDistance Traveled\tElevation Gained\n";
+			
+			bird.fly(interval);
+			airPlane.fly(interval);
+			jetPlane.fly(interval);
+			missile.fly(interval);
+			superMan.fly(interval);
+			
+			flightStats = flightStats + "Bird" + bird.flightStats();
+			flightStats = flightStats + "Airplane" + airPlane.flightStats();
+			flightStats = flightStats + "Jetplane" + jetPlane.flightStats();
+			flightStats = flightStats + "Missile" + missile.flightStats();
+			flightStats = flightStats + "superMan" + jetPlane.flightStats();
+			flightStats = flightStats + "\tFLIGHT TIME: " + Integer.toString(interval) + " MINUTES";
+			
+			
+			JOptionPane.showMessageDialog(null, new JTextArea(String.format("%s", flightStats)));
+			
+			interval = interval + 5;	
+		}
+		
+	}
+}
+
+package Final.Q2;
+import java.text.DecimalFormat;
+public class FlyingThing {
+
+	
+	double airSpeed;
+	double altimeter;
+	int time;
+	double distanceTraveled;
+	double elevationGained;
+	public String flightStats;
+	
+	DecimalFormat df = new DecimalFormat("#.###");
+	
+	public FlyingThing(int m, int f){
+		airSpeed = m;
+		altimeter = f;
+	}
+	
+	public void fly(){
+		// 1 Minute of Flight = Miles per Hour / 60 Minutes
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0)* 1));
+		// 1 Minute of Flight = Feed per Minute * 1 Minute
+		elevationGained = altimeter * 1;
+	}
+	
+	public void fly(int t){
+		distanceTraveled = Double.valueOf(df.format((airSpeed / 60.0) * t));
+		elevationGained = altimeter * t;
+	}
+	
+	public String flightStats(){
+		flightStats = "\t" + Double.toString(distanceTraveled) + "mph\t\t" + Double.toString(elevationGained) + "ft.\n";;
+		
+		return flightStats;
+	}
+	
+	
+	public void setAirSpeed(int airSpeedMPH){
+		airSpeed = airSpeedMPH;
+	}
+	
+	public void setAltimeter(int elevationPerMinute){
+		altimeter = elevationPerMinute;
+	}
+	
+}
+
